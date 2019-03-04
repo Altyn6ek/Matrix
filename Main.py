@@ -33,4 +33,4 @@ try:
     A.filling()
     print(A.display())
 except ValueError:
-    print("Something went wronnnng...")
+    print("Something went wrooong...")
