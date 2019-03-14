@@ -3,7 +3,9 @@ class Matrix:
 
     def __init__(self, row, column):
         self.dimension = (row, column)      # Dimension of created square matrix
-        self.data = [[0]*column for i in range(row)]        # Matrix list, default filling with 0 values
+        self.data = []
+        for i in range(row):
+            self.data.append([0.0] * column)
 
     # Printing a matrix
     def display(self) -> object:
@@ -16,23 +18,25 @@ class Matrix:
             for j in range(len(self.data[i])):
                 print('Type value for element X%d%d: ' % (i+1, j+1))
                 x = input()
-                self.data[i][j] = int(x)
+                self.data[i][j] = float(x)
 
     # The multiplication of two matrices
     @staticmethod
     def multiplication(a, b):
-        rows_a = len(int(a.dimension))
-        columns_a = len(int(a.dimension[1]))
-        rows_b = len(int(b.dimension))
-        columns_b = len(int(b.dimension[1]))
+        rows_a = a.dimension[0]
+        columns_a = a.dimension[1]
+        rows_b = b.dimension[0]
+        columns_b = b.dimension[1]
 
-        c = [[0 for row in range(columns_b)] for col in range(rows_a)]
+        c = Matrix(rows_a, columns_b)
 
         if rows_a == columns_b and columns_a == rows_b:
             for i in range(rows_a):
                 for j in range(columns_b):
                     for k in range(columns_a):
-                        c[i][j] += a[i][k] * b[k][j]
-            c.display()
+                        c.data[i][j] += a.data[i][k] * b.data[k][j]
         else:
-            print("Matrices are not compatible to multiply!")
+            print('Matrices are not compatible to multiply!')
+
+        print('Result of multiplying: ')
+        c.display()

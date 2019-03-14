@@ -11,7 +11,7 @@ for i in range(2):
     try:
         A = Matrix.Matrix(int(a), int(b))
         A.fill()
-        A.display()
+        #A.display()
         if i == 0:
             matrix_a = A
         else:
