@@ -1,8 +1,8 @@
-import Matrix
+from Matrix import Matrix
 
 
 # Multiplication of 2 matrices
-def multiplications(a, b):
+def multiplication(a, b):
     rows_a = a.dimension[0]
     columns_a = a.dimension[1]
     rows_b = b.dimension[0]
