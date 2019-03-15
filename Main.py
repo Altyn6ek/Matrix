@@ -1,15 +1,17 @@
-import Matrix
+from Matrix import Matrix
+import Calculations
 
-matrix_a = Matrix.Matrix(2, 2)
-matrix_b = Matrix.Matrix(0, 0)
+matrix_a = Matrix(2, 2)
+matrix_b = Matrix(0, 0)
 
+# Filling matrices a and b
 for i in range(2):
     print('Type values for Matrix %d: ' % (i + 1))
     a = input("Enter the number of rows: ")
     b = input("Enter the number of columns: ")
 
     try:
-        A = Matrix.Matrix(int(a), int(b))
+        A = Matrix(int(a), int(b))
         A.fill()
         if i == 0:
             matrix_a = A
@@ -19,4 +21,4 @@ for i in range(2):
         print("Please enter an integer value!")
         break
 
-Matrix.Matrix.multiplications(matrix_a, matrix_b)
+Calculations.multiplication(matrix_a, matrix_b)
