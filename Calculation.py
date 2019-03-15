@@ -1,9 +1,6 @@
 import Matrix
 
-
-class Calculator(Matrix):
-
-    @staticmethod
+    # Multiplication of 2 matrices
     def multiplications(a, b):
         rows_a = a.dimension[0]
         columns_a = a.dimension[1]

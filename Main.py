@@ -1,6 +1,5 @@
 import Matrix
 
-
 matrix_a = Matrix.Matrix(2, 2)
 matrix_b = Matrix.Matrix(0, 0)
 
@@ -12,7 +11,6 @@ for i in range(2):
     try:
         A = Matrix.Matrix(int(a), int(b))
         A.fill()
-        #A.display()
         if i == 0:
             matrix_a = A
         else:
@@ -21,4 +19,4 @@ for i in range(2):
         print("Please enter an integer value!")
         break
 
-Matrix.Matrix.multiplications(matrix_a, matrix_b)
+Matrix.Matrix.multiplication(matrix_a, matrix_b)
