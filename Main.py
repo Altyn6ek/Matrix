@@ -1,5 +1,4 @@
 from Matrix import Matrix
-import MatrixCalc
 
 matrix_a = Matrix(2, 2)
 matrix_b = Matrix(0, 0)
@@ -21,4 +20,4 @@ for i in range(2):
         print("Please enter an integer value!")
         break
 
-MatrixCalc.multiplication(matrix_a, matrix_b)
+Matrix.multiplication(matrix_a, matrix_b)
