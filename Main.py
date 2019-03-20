@@ -20,4 +20,5 @@ for i in range(2):
         print("Please enter an integer value!")
         break
 
-Matrix.multiplication(matrix_a, matrix_b)
+# Matrix.multiplication(matrix_a, matrix_b)
+matrix_a.plus(matrix_b).display()

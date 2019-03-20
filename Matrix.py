@@ -20,6 +20,16 @@ class Matrix:
                 x = input()
                 self.data[i][j] = int(x)
 
+    def plus(self, B):
+        if self.dimension == B.dimension:
+            for i in range(self.dimension[0]):
+                for j in range(self.dimension[1]):
+                    self.data[i][j] += B.data[i][j]
+        else:
+            print("Matrices should be with the same dimensions!")
+        return self
+
+
     # Multiplication of 2 matrices
     @staticmethod
     def multiplication(a, b):
@@ -40,3 +50,4 @@ class Matrix:
 
         print('Result of multiplying: ')
         c.display()
+
