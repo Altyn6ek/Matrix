@@ -8,7 +8,7 @@ class Matrix:
             self.data.append([0] * column)
 
     # Printing a matrix
-    def display(self) -> object:
+    def display(self):
         for i in range(len(self.data)):
             print(self.data[i])
 
@@ -25,6 +25,15 @@ class Matrix:
             for i in range(self.dimension[0]):
                 for j in range(self.dimension[1]):
                     self.data[i][j] += B.data[i][j]
+        else:
+            print("Matrices should be with the same dimensions!")
+        return self
+
+    def minus(self, B):
+        if self.dimension == B.dimension:
+            for i in range(self.dimension[0]):
+                for j in range(self.dimension[1]):
+                    self.data[i][j] -= B.data[i][j]
         else:
             print("Matrices should be with the same dimensions!")
         return self
