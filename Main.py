@@ -1,4 +1,4 @@
-from Matrix import Matrix
+from matrix.Matrix import Matrix
 
 matrix_a = Matrix(2, 2)
 matrix_b = Matrix(0, 0)
