@@ -1,2 +1,2 @@
 # Matrix
-Console application for operations under matrices: muliplying
+Console application for operations under matrices
