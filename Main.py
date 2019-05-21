@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from Matrix import Matrix
 
 matrix_a = Matrix(2, 2)
